@@ -1,0 +1,20 @@
+CREATE TABLE boxes (
+  box_id int(11) NOT NULL AUTO_INCREMENT,
+  numero varchar(45) NOT NULL DEFAULT '',
+  nombre varchar(45) NOT NULL DEFAULT '',
+  PRIMARY KEY (box_id)
+) ENGINE=InnoDB AUTO_INCREMENT=1;
+
+CREATE TABLE turnos (
+  turno_id int(11) NOT NULL AUTO_INCREMENT,
+  numero int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (turno_id)
+) ENGINE=InnoDB AUTO_INCREMENT=1;
+
+CREATE TABLE turnos_boxes (
+  turno_box_id int(11) NOT NULL AUTO_INCREMENT,
+  fecha timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  box_id int(11) NOT NULL,
+  turno_id int(11) NOT NULL,
+  PRIMARY KEY (turno_box_id)
+) ENGINE=InnoDB AUTO_INCREMENT=1;
