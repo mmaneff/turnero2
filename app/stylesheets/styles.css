@@ -112,80 +112,191 @@ body {
 
 /* line 111, ../sass/styles.scss */
 #page-wrapper {
-  margin-top: 100px;
+  height: calc(100vh - 20px);
+  margin: 10px;
 }
 
-/* line 115, ../sass/styles.scss */
+/* line 119, ../sass/styles.scss */
 .text-center {
   text-align: center;
 }
 
-/* line 119, ../sass/styles.scss */
+/* line 123, ../sass/styles.scss */
 .monitor-titulo {
   font-size: 3em;
   font-weight: bold;
   border-bottom: 3px solid #fff;
 }
 
-/* line 124, ../sass/styles.scss */
+/* line 128, ../sass/styles.scss */
 .monitor-container {
   background-color: #25337e;
 }
 
-/* line 127, ../sass/styles.scss */
+/* line 131, ../sass/styles.scss */
 .banner-container {
   background-color: #0d1a61;
+  height: 60px;
+  text-align: center;
+  font-size: 3em;
 }
 
-/* line 131, ../sass/styles.scss */
+/* line 138, ../sass/styles.scss */
 .banner {
   font-size: 2.4em;
   padding: 15px 30px;
 }
 
-/* line 136, ../sass/styles.scss */
+/* line 143, ../sass/styles.scss */
 #monitor-container {
   width: 100%;
 }
 
-/* line 140, ../sass/styles.scss */
+/* line 147, ../sass/styles.scss */
 .box-container {
   text-align: center;
   font-size: 3em;
 }
 
-/* line 144, ../sass/styles.scss */
+/* line 151, ../sass/styles.scss */
 .margin-0 {
   margin: 0 !important;
 }
 
-/* line 147, ../sass/styles.scss */
+/* line 154, ../sass/styles.scss */
 .padding-0 {
   padding: 0 !important;
 }
 
-/* line 150, ../sass/styles.scss */
+/* line 157, ../sass/styles.scss */
 th, td {
   text-align: center !important;
 }
 
-/* line 153, ../sass/styles.scss */
+/* line 160, ../sass/styles.scss */
 .pagination {
   color: #000000;
   width: 55px;
   text-align: center;
 }
 
-/* line 158, ../sass/styles.scss */
+/* line 165, ../sass/styles.scss */
 .h1, h1 {
   text-align: center;
   margin-bottom: 25px !important;
 }
 
-/* line 162, ../sass/styles.scss */
+/* line 169, ../sass/styles.scss */
 .table > tbody > tr > td:active,
 .table > tbody > tr > td:focus,
 .table > tbody > tr > td:hover,
 .table > tbody > tr > td:visited {
   background-color: #428bca !important;
+}
+
+/* line 177, ../sass/styles.scss */
+.label--checkbox,
+.label--radio {
+  position: relative;
+  margin: 0.5rem;
+  font-family: "Roboto", 'sans-serif';
+  line-height: 135%;
+  cursor: pointer;
+  /* vertical-align: text-bottom; */
+  display: flex;
+  padding-top: 10px;
+}
+
+/* line 189, ../sass/styles.scss */
+.checkbox {
+  position: relative;
+  margin: 0 1rem 0 0;
+  cursor: pointer;
+}
+/* line 194, ../sass/styles.scss */
+.checkbox:before {
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 0.85rem;
+  height: 0.85rem;
+  border: 2px solid #f2f2f2;
+}
+/* line 208, ../sass/styles.scss */
+.checkbox:checked:before {
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  height: .5rem;
+  border-color: deepskyblue;
+  border-top-style: none;
+  border-right-style: none;
+}
+/* line 217, ../sass/styles.scss */
+.checkbox:after {
+  content: "";
+  position: absolute;
+  top: rem(-2);
+  left: 0;
+  width: 1.1rem;
+  height: 1.1rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+/* line 229, ../sass/styles.scss */
+.radio {
+  position: relative;
+  margin: 0 1rem 0 0;
+  cursor: pointer;
+}
+/* line 233, ../sass/styles.scss */
+.radio:before {
+  -moz-transition: -moz-transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+  -o-transition: -o-transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+  -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+  transition: transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+  -moz-transform: scale(0, 0);
+  -ms-transform: scale(0, 0);
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: rem(2);
+  z-index: 1;
+  width: rem(12);
+  height: rem(12);
+  background: lightblue;
+  border-radius: 50%;
+}
+/* line 248, ../sass/styles.scss */
+.radio:checked:before {
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+/* line 253, ../sass/styles.scss */
+.radio:after {
+  content: "";
+  position: absolute;
+  top: rem(-4);
+  left: rem(-2);
+  width: 1rem;
+  height: 1rem;
+  background: #fff;
+  border: 2px solid lightblue;
+  border-radius: 50%;
+}
+
+/* line 267, ../sass/styles.scss */
+#myCarousel {
+  height: 50px;
 }

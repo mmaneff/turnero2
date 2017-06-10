@@ -2,6 +2,7 @@ CREATE TABLE boxes (
   box_id int(11) NOT NULL AUTO_INCREMENT,
   numero varchar(45) NOT NULL DEFAULT '',
   nombre varchar(45) NOT NULL DEFAULT '',
+  status int(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (box_id)
 ) ENGINE=InnoDB AUTO_INCREMENT=1;
 
@@ -17,4 +18,10 @@ CREATE TABLE turnos_boxes (
   box_id int(11) NOT NULL,
   turno_id int(11) NOT NULL,
   PRIMARY KEY (turno_box_id)
+) ENGINE=InnoDB AUTO_INCREMENT=1;
+
+CREATE TABLE doctores (
+  doctor_id int(11) NOT NULL AUTO_INCREMENT,
+  nombre varchar(45) NOT NULL DEFAULT '',
+  PRIMARY KEY (doctor_id)
 ) ENGINE=InnoDB AUTO_INCREMENT=1;

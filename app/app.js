@@ -10,9 +10,11 @@
     'acUtils',
     'modBoxes',
     'modTurnos',
+    'modDoctores',
     'acAbmBoxes',
     'acAbmTurnos',
     'acAbmDoctores',
+    'acDoctorBox',
     'monitorTurnos'
   ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');
@@ -66,6 +68,18 @@
                 return $ocLazyLoad.load('cliente/cliente.js');
             }]
         }
+    });
+
+    $routeProvider.when('/doctorbox', {
+      templateUrl: 'doctorbox/doctorbox.html',
+      controller: 'DoctorBoxCtrl',
+      //data: {requiresLogin: false},
+      resolve: { // Any property in resolve should return a promise and is executed before the view is loaded
+          loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+              // you can lazy load files for an existing module
+              return $ocLazyLoad.load('doctorbox/doctorbox.js');
+          }]
+      }
     });
 
   }]).controller('AppCtrl', AppCtrl);
